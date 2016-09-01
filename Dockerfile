@@ -6,4 +6,4 @@ COPY build-rpm.sh /root/
 COPY postinstall postuninstall preuninstall /root/
 WORKDIR /root
 
-CMD ["/root/build-rpm.sh" ]
+CMD ["/bin/bash", "/root/build-rpm.sh" ]
