@@ -1,0 +1,3 @@
+/sbin/ldconfig
+/sbin/chkconfig --add strongswan
+/usr/bin/chcon -t etc_t /etc/init.d/strongswan

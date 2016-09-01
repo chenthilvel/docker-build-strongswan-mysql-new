@@ -1,0 +1,5 @@
+if [ $1 -eq 0 ] ; then
+    # Package removal, not upgrade
+    /sbin/service strongswan stop >/dev/null 2>&1
+    /sbin/chkconfig --del strongswan
+fi

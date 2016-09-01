@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# chkconfig: 235 95 01
+# description:  Customized strongSwan Linux service controller script
+
+case "$1" in
+    start)
+        /usr/sbin/ipsec start
+        ;;
+    stop)
+        /usr/sbin/ipsec stop
+        ;;
+    status)
+        /usr/sbin/ipsec status
+        ;;
+    reload)
+        /usr/sbin/ipsec reload
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|status|reload}"
+        exit 1
+        ;;
+esac
